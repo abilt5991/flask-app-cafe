@@ -1,0 +1,248 @@
+/* Reset & base */
+
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background: #fff8f3;
+    margin: 0;
+    padding: 0;
+    color: #2c2c2c;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* occupy most of viewport height */
+}
+
+/* Visually hidden helper */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem 0 1rem;
+    background: #f4e3dc; /* soft warm banner */
+}
+
+.site-title {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #b32b9e; /* magenta */
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* Welcome section */
+.welcome h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Navigation links */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.links .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #b32b9e, #c52965); /* magenta gradient */
+    color: #fff;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.links .btn:hover,
+.links .btn:focus {
+    background: linear-gradient(135deg, #c52965, #b32b9e);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* Form container */
+.cafe-form {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cafe-form:hover {
+    transform: translateY(-2px);
+}
+
+/* Form title */
+.cafe-form h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #b32b9e; /* magenta */
+    text-align: center;
+}
+
+/* Labels */
+.cafe-form label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+/* Inputs */
+.cafe-form input[type="text"] {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.cafe-form input[type="text"]:focus {
+    border-color: #b32b9e;
+    box-shadow: 0 0 0 3px rgba(179, 43, 158, 0.2);
+    outline: none;
+}
+
+/* Small hint */
+.cafe-form small {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Form button */
+.cafe-form button {
+    padding: 0.9rem;
+    background: linear-gradient(135deg, #b32b9e, #c52965);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.cafe-form button:hover,
+.cafe-form button:focus {
+    background: linear-gradient(135deg, #c52965, #b32b9e);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* Grid layout */
+.cafes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-auto-rows: minmax(180px, auto);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Cafe card */
+.cafe-card {
+    background: linear-gradient(145deg, #fff7f3, #ffe6dc);
+    border-radius: 20px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cafe-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+}
+
+/* Card header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cafe-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #b32b9e; /* magenta */
+}
+
+.cafe-price {
+    background: linear-gradient(135deg, #b32b9e, #c52965);
+    color: white;
+    font-weight: bold;
+    padding: 0.4rem 0.7rem;
+    border-radius: 12px;
+    font-size: 1.05rem;
+}
+
+/* Location */
+.cafe-location {
+    font-size: 1rem;
+    color: #555;
+    background: #ffe6dc;
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* "View Details" button */
+.btn-view {
+    align-self: flex-start;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(135deg, #b32b9e, #c52965);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 14px;
+    transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.btn-view:hover {
+    background: linear-gradient(135deg, #c52965, #b32b9e);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cafes-grid {
+        grid-template-columns: 1fr;
+    }
+}

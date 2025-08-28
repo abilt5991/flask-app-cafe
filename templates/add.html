@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Cafe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main>
+        <form action="/submit" method="POST" class="cafe-form" aria-labelledby="form-title">
+            <h1 id="form-title">Add a Cafe</h1>
+
+            <label for="name">Cafe Name</label>
+            <input id="name" name="name" type="text" required aria-required="true" />
+
+            <label for="location">Location</label>
+            <input id="location" name="location" type="text" required aria-required="true" />
+
+            <label for="price">Coffee Price</label>
+            <input id="price" name="price" type="text" inputmode="decimal" pattern="[0-9]+(\.[0-9]{1,2})?" aria-describedby="price-hint" required aria-required="true" />
+            <small id="price-hint">Enter price in numbers (e.g., 3.50)</small>
+
+            <button type="submit">Add Cafe</button>
+        </form>
+    </main>
+</body>
+</html>

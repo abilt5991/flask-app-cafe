@@ -1,0 +1,16 @@
+# Node / frontend
+node_modules/
+dist/
+.env
+
+# Python / backend
+__pycache__/
+*.pyc
+*.db
+venv/
+.env
+
+# IDE files
+.idea/
+.vscode/
+

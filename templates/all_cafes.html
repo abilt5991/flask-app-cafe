@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Cafes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>All Cafes</h1>
+    </header>
+
+   <main class="container">
+    {% if cafes %}
+    <div class="cafes-grid">
+        {% for id, cafename, loc, price in cafes %}
+        <div class="cafe-card">
+            <div class="card-header">
+                <h2 class="cafe-name">{{ cafename }}</h2>
+                <span class="cafe-price">${{ price }}</span>
+            </div>
+            <p class="cafe-location">📍 {{ loc }}</p>
+            <a href="#" class="btn-view">View Details</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>No cafes found.</p>
+    {% endif %}
+</main>
+
+</body>
+</html>

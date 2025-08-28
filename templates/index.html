@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cafe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="site-title">☕ My Cafe</h1>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <h2 id="welcome-title">Welcome to My Cafe</h2>
+            <p>Track and explore your favorite cafes!</p>
+        </section>
+
+        <nav class="navigation" aria-labelledby="nav-title">
+            <h2 id="nav-title" class="visually-hidden">Navigation</h2>
+            <div class="links">
+                <a href="{{ url_for('add_form') }}" class="btn">➕ Add a Cafe</a>
+                <a href="{{ url_for('get_all_cafe_html') }}" class="btn">📜 View All Cafes</a>
+                <a href="{{ url_for('random_cafe') }}" class="btn">🎲 Random Cafe</a>
+            </div>
+        </nav>
+    </main>
+</body>
+</html>
