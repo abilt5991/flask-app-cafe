@@ -1,0 +1,10 @@
+
+# Force all Python files to be detected as Python
+*.py linguist-language=Python
+
+# Mark CSS/JS/html templates as vendored so they don't count
+*.css linguist-vendored
+*.js linguist-vendored
+*.html linguist-vendored
+
+
